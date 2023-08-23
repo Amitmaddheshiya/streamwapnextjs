@@ -1,0 +1,45 @@
+{
+  "name": "streamwap",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@videojs/themes": "^1.0.1",
+    "animate.css": "^4.1.1",
+    "formik": "^2.2.9",
+    "lodash-es": "^4.17.21",
+    "material-icons": "^1.10.8",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-owl-carousel": "^2.3.3",
+    "react-redux": "^7.2.8",
+    "react-spring": "^9.4.4",
+    "react-use-gesture": "^9.1.3",
+    "react-use-measure": "^2.1.1",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1",
+    "uglify-js": "^3.17.4",
+    "videojs-contrib-quality-levels": "^2.1.0",
+    "videojs-hls-quality-selector": "^1.1.4",
+    "videojs-hotkeys": "^0.2.27",
+    "videojs-seek-buttons": "^2.2.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.0",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23",
+    "video.js": "^7.18.1"
+  }
+}
