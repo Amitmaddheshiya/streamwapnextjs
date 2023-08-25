@@ -1,4 +1,5 @@
 import AnimationReducer from "../tailwind/animation/animation.reducer";
+import DialogReducer from "../tailwind/dialog/dialog.reducer";
 
 import {
   createStore,
@@ -15,7 +16,8 @@ const middlewares = applyMiddleware(
 );
 
 const root = combineReducers({
-  AnimationReducer
+  AnimationReducer,
+  DialogReducer
 });
 
 const store = createStore(root,{},middlewares);

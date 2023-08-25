@@ -3,6 +3,7 @@ import IconButton from "./icon-button";
 import Card from "./card";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import Dialog from "./dialog";
 
 import {
   Fade,
@@ -21,15 +22,7 @@ import {
 } from "./animation";
 
 
-import {
-  Form,
-  Email,
-  Password,
-  Input,
-  Select,
-  Radio,
-  Checkbox
-} from "./form";
+import Form from "./form";
 
 export {
   Button,
@@ -47,10 +40,5 @@ export {
   Slider,
   Footer,
   Form,
-  Email,
-  Password,
-  Input,
-  Select,
-  Radio,
-  Checkbox
+  Dialog
 }
