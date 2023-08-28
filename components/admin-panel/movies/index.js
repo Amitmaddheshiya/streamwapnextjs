@@ -2,7 +2,7 @@ import {
   Dialog,
   Form
 } from "../../../tailwind";
-import {useState} from "react";
+import useS3 from "../../../hooks/useS3";
 
 const index = ()=>{
   const options = [
@@ -70,8 +70,7 @@ const index = ()=>{
         name: "video",
         className: "bg-gray-100 rounded-sm border-0 py-3",
         label: "Video file",
-        accept: ".mp4",
-        multiple: true
+        accept: ".mp4"
       }
     },
     {
@@ -95,8 +94,39 @@ const index = ()=>{
     },
   ];
 
-  const onSubmit = (values)=>{
-    console.log(values);
+  const onSubmit = async (values)=>{
+    const fileProps = [
+      {
+        name: "thumbnail",
+        key: "demo/thumb.png"
+      },
+      {
+        name: "video",
+        key: "demo/vid.mp4"
+      }
+    ]
+    for(let data of fileProps)
+    {
+      const upload = useS3(values[data.name],data.key);
+
+      const uploading = await upload();
+
+      uploading.on('httpUploadProgress',(e)=>{
+        let loaded = e.loaded;
+        let total = e.total;
+        let p = Math.floor((loaded*100)/total);
+        console.log(p+"%");
+      });
+
+      try {
+        const file = await uploading.promise();
+        console.log(file);
+      }
+      catch(err)
+      {
+        console.log(err);
+      }
+    }
   }
 
   const MovieForm = ()=>{

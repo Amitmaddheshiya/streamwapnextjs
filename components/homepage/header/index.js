@@ -4,7 +4,7 @@ import {
   Icon
 } from "../../../tailwind";
 
-const index = ()=>{
+const index = ()=>{ 
 
   const Caption = ({data})=>{
     const design = (
